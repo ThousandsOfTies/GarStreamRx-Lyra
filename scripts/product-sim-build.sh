@@ -59,6 +59,7 @@ PartOf=gar-sim.target
 Type=simple
 WorkingDirectory=${deploy_dest}
 Environment=GAR_GPIO_CHIP=/dev/gpiochip0
+Environment=GAR_ENC_DEBOUNCE_US=0
 Environment=GAR_SPI_DEVICE=/dev/spidev0.0
 Environment=GAR_SPI_MAX_HZ=24000000
 Environment=GAR_LCD_DC_GPIO=23
