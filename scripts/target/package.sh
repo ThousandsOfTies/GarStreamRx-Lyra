@@ -93,6 +93,7 @@ if [ -n "$missing" ]; then
 fi
 
 export GAR_GPIO_CHIP="${GAR_GPIO_CHIP:-/dev/gpiochip0}"
+export GAR_ENC_DEBOUNCE_US="${GAR_ENC_DEBOUNCE_US:-1000}"
 export GAR_SPI_DEVICE="${GAR_SPI_DEVICE:-/dev/spidev0.0}"
 export GAR_SPI_MAX_HZ="${GAR_SPI_MAX_HZ:-10000000}"
 export GAR_STREAM_DISCOVERY_PORT="${GAR_STREAM_DISCOVERY_PORT:-5601}"
@@ -152,6 +153,7 @@ cat >"${staging_dir}/gar-stream-rx.env.example" <<'EOF'
 # Copy to /etc/gar/gar-stream-rx.env and replace the GPIO offsets with values
 # documented for the Luckfox Lyra Plus header wiring.
 GAR_GPIO_CHIP=/dev/gpiochip0
+GAR_ENC_DEBOUNCE_US=1000
 GAR_SPI_DEVICE=/dev/spidev0.0
 GAR_SPI_MAX_HZ=10000000
 GAR_LCD_DC_GPIO=3
